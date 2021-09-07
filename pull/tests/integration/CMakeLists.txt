@@ -2,12 +2,18 @@
 add_executable(sample_server
   sample_server.cc
 )
-
+add_executable(sk_server
+    sk_server.cc
+)
 target_link_libraries(sample_server
   PRIVATE
     ${PROJECT_NAME}::pull
 )
 
+target_link_libraries(sk_server
+    PRIVATE
+      ${PROJECT_NAME}::pull
+ )
 add_executable(sample_server_multi
   sample_server_multi.cc
 )
